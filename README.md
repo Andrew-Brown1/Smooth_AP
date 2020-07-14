@@ -10,7 +10,7 @@ Training code and pre-trained weights coming soon...
 ## Paper
 If you find this work useful, please consider citing:
 ```
-@misc{Smooth_AP,
+@InProceedings{Smooth_AP,
     title = {Smooth-AP: Smoothing the Path Towards Large-Scale Image Retrieval},
     author = {Andrew Brown and Weidi Xie and Vicky Kalogeiton and Andrew Zisserman},
     booktitle = {ECCV},
