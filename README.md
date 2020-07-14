@@ -5,4 +5,4 @@ The PyTorch implementation of the Smooth-AP loss function is found in src/Smooth
 
 Training code and pre-trained weights coming soon...
 
-![GitHub Logo](https://github.com/Andrew-Brown1/Smooth_AP/ims/vic_teaser6.pdf)
+![teaser](https://github.com/Andrew-Brown1/Smooth_AP/blob/master/ims/vic_teaser6.pdf)
