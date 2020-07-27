@@ -1,5 +1,5 @@
 # Smooth_AP
-code for the ECCV '20 paper "Smooth-AP: Smoothing the Path Towards Large-Scale Image Retrieval" [Webpage](https://www.robots.ox.ac.uk/~vgg/research/smooth-ap/)
+code for the ECCV '20 paper "Smooth-AP: Smoothing the Path Towards Large-Scale Image Retrieval" ([webpage](https://www.robots.ox.ac.uk/~vgg/research/smooth-ap/))
 
 The PyTorch implementation of the Smooth-AP loss function is found in src/Smooth_AP_loss.py
 
