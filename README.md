@@ -11,7 +11,9 @@ Training code and pre-trained weights coming soon...
 This repository is used for training using Smooth-AP loss on the following datasets:
 
 - PKU Vehicle ID (obtained from this website https://pkuml.org/resources/pku-vehicleid.html - must email authors for download permission)
-- Inaturalist (2018 version - obtained from this website https://www.kaggle.com/c/inaturalist-2018/data)
+- INaturalist (2018 version - obtained from this website https://www.kaggle.com/c/inaturalist-2018/data)
+
+We are the first to use the large-scale INaturalist dataset for the task of image retreival. The dataset splits can be downloaded here: https://drive.google.com/file/d/1sXfkBTFDrRU3__-NUs1qBP3sf_0uMB98/view?usp=sharing . Unpack the zip into the Inaturalist dataset directory. 
 
 ## Training the model
 training results for the Vehicle ID and Inaturalist datasets can be replicated using this repository. To train the model on the Vehicle ID dataset, you can run 
