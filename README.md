@@ -7,6 +7,12 @@ Training code and pre-trained weights coming soon...
 
 ![teaser](https://github.com/Andrew-Brown1/Smooth_AP/blob/master/ims/teaser.png)
 
+## Dependencies
+
+- Python 3.7.7
+- PyTorch 1.6.0
+- Cuda 10.1
+
 ## Data
 This repository is used for training using Smooth-AP loss on the following datasets:
 
