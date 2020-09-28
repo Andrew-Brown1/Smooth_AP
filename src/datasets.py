@@ -4,13 +4,11 @@
 import warnings
 warnings.filterwarnings("ignore")
 
-import numpy as np, pandas as pd, copy, torch, random
+import numpy as np, pandas as pd, copy, torch, random, os
 
 from torch.utils.data import Dataset
 from PIL import Image
 from torchvision import transforms
-
-
 
 """============================================================================"""
 ################ FUNCTION TO RETURN ALL DATALOADERS NECESSARY ####################
@@ -62,7 +60,7 @@ def give_inaturalist_datasets(opt):
     #Load text-files containing classes and imagepaths.
     #Generate image_dicts of shape {class_idx:[list of paths to images belong to this class] ...}
     train_image_dict, val_image_dict  = {},{}
-    with open(opt.source_path+'/Inaturalist_train_set1.txt') as f:
+    with open(os.path.join(opt.source_path,'Inat_dataset_splits/Inaturalist_train_set1.txt')) as f:
         FileLines = f.readlines()
         FileLines = [x.strip() for x in FileLines]
 
@@ -70,9 +68,10 @@ def give_inaturalist_datasets(opt):
             info = entry.split('/')
             if '/'.join([info[-3],info[-2]]) not in train_image_dict:
                 train_image_dict['/'.join([info[-3],info[-2]])] = []
-            train_image_dict['/'.join([info[-3],info[-2]])].append(entry)
+            train_image_dict['/'.join([info[-3],info[-2]])].append(os.path.join(opt.source_path,entry))
+            
 
-    with open(opt.source_path+'/Inaturalist_test_set1.txt') as f:
+    with open(os.path.join(opt.source_path,'Inat_dataset_splits/Inaturalist_test_set1.txt')) as f:
         FileLines = f.readlines()
         FileLines = [x.strip() for x in FileLines]
 
@@ -80,7 +79,8 @@ def give_inaturalist_datasets(opt):
             info = entry.split('/')
             if '/'.join([info[-3],info[-2]]) not in val_image_dict:
                 val_image_dict['/'.join([info[-3],info[-2]])] = []
-            val_image_dict['/'.join([info[-3],info[-2]])].append(entry)
+            val_image_dict['/'.join([info[-3],info[-2]])].append(os.path.join(opt.source_path,entry))
+            
 
     new_train_dict = {}
     class_ind_ind = 0
