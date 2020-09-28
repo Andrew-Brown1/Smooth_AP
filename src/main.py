@@ -88,7 +88,7 @@ random.seed(opt.seed)
 np.random.seed(opt.seed)
 torch.manual_seed(opt.seed)
 torch.cuda.manual_seed(opt.seed); torch.cuda.manual_seed_all(opt.seed)
-tensorboard_path = Path(f"/scratch/shared/nfs1/abrown/beegfs_back_up/training_results/logs/logs_{exp_name}") / timestamp
+tensorboard_path = Path(f"logs/logs_{exp_name}") / timestamp
 
 tensorboard_path.parent.mkdir(exist_ok=True, parents=True)
 global writer;
