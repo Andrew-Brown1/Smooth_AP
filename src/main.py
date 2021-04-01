@@ -44,7 +44,7 @@ parser.add_argument('--seed',              default=1,        type=int,   help='R
 parser.add_argument('--scheduler',         default='step',   type=str,   help='Type of learning rate scheduling. Currently: step & exp.')
 parser.add_argument('--gamma',             default=0.3,      type=float, help='Learning rate reduction after tau epochs.')
 parser.add_argument('--decay',             default=0.0004,   type=float, help='Weight decay for optimizer.')
-parser.add_argument('--tau',               default= [200,300,300,120,220,250,280],nargs='+',type=int,help='Stepsize(s) before reducing learning rate.')
+parser.add_argument('--tau',               default= [200,300],nargs='+',type=int,help='Stepsize(s) before reducing learning rate.')
 parser.add_argument('--infrequent_eval', default=0,type=int, help='only compute evaluation metrics every 10 epochs')
 parser.add_argument('--opt', default = 'adam',help='adam or sgd')
 ##### Loss-specific Settings
